@@ -184,9 +184,9 @@ public class TechnicienTest {
 		Object d2 = TestUtils.getClasse("Technicien").getConstructor().newInstance();
 		TestUtils.invokeSetter(d2, "grade", 2);
 
-		Assertions.assertThat(TestUtils.callMethod(d, "compareTo", d2)).isEqualTo(-1);
+		Assertions.assertThat(TestUtils.callMethod(d, "compareTo", d2)).isEqualTo(1);
 		Assertions.assertThat(TestUtils.callMethod(d, "compareTo", d)).isEqualTo(0);
-		Assertions.assertThat(TestUtils.callMethod(d2, "compareTo", d)).isEqualTo(1);
+		Assertions.assertThat(TestUtils.callMethod(d2, "compareTo", d)).isEqualTo(-1);
 	}
 
 
